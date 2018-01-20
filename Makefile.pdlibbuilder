@@ -240,7 +240,7 @@ version = 0.4.4
 #
 # Linux:    /usr/include/pd
 #
-# OSX:      /Applications/Pd*.app/Contents/Resources/src
+# OSX:      /Applications/Pd*.app/Contents/Resources/include
 #
 # Windows:  %PROGRAMFILES%/pd/src
 #
@@ -519,7 +519,7 @@ endif
 ifeq ($(system), Darwin)
   pkglibdir = $(HOME)/Library/Pd
   pdincludepath := $(firstword $(wildcard \
-    /Applications/Pd*.app/Contents/Resources/src))
+    /Applications/Pd*.app/Contents/Resources/include))
   extension = pd_darwin
   cpp.flags := -DUNIX -DMACOSX -I /sw/include
   c.flags :=
